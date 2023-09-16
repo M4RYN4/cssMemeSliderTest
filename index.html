@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Meme Slider</title>
+    <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
-    
+ <div class="wrap">
+  <h1>CSS Meme Slider</h1>
+
+  <input id="slide1" type="radio" name="radio-slides" class="hidden" checked>
+  <input id="slide2" type="radio" name="radio-slides" class="hidden">
+  <input id="slide3" type="radio" name="radio-slides" class="hidden">
+  <input id="slide4" type="radio" name="radio-slides" class="hidden">
+  <input id="slide5" type="radio" name="radio-slides" class="hidden">
+
+    <!-- <label for="slide1" class="label-radio label-radio1"></label>
+    <input id="slide1" type="radio" name="radio-slides" class="dot" checked>
+
+    <label for="slide2" class="label-radio label-radio2"></label>
+    <input id="slide2" type="radio" name="radio-slides" class="dot">
+
+    <label for="slide3" class="label-radio label-radio3"></label>
+    <input id="slide3" type="radio" name="radio-slides" class="dot">
+
+    <label for="slide4" class="label-radio label-radio4"></label>
+    <input id="slide4" type="radio" name="radio-slides" class="dot"> -->
+
+
+    <div class="wrap-slides-outer">
+      <div class="wrap-slides">
+        <div class="slide"><img src="images/10.jpg" alt="Slide"></div>
+        <div class="slide"><img src="images/11b.jpg" alt="Slide"></div>
+        <div class="slide"><img src="images/13.webp" alt="Slide"></div>
+        <div class="slide"><img src="images/14a.jpg" alt="Slide"></div>
+        <div class="slide"><img src="images/15.gif" alt="Slide"></div>
+      </div>
+    </div>
+
+    <div class="wrap-text-labels">
+      <div class="wrap-text">
+        <p class="text text-slide1">Going to merge branches...</p>
+        <p class="text text-slide2">Part of code is from internet</p>
+        <p class="text text-slide3">Projects</p>
+        <p class="text text-slide4">5em instead of 5px</p>
+        <p class="text text-slide5">Testing...</p>
+      </div>
+
+      <div class="wrap-labels">
+        <label for="slide1" class="label-radio label-radio1"><span class="dot"></span></label>
+        <label for="slide2" class="label-radio label-radio2"><span class="dot"></span></label>
+        <label for="slide3" class="label-radio label-radio3"><span class="dot"></span></label>
+        <label for="slide4" class="label-radio label-radio4"><span class="dot"></span></label>
+        <label for="slide5" class="label-radio label-radio5"><span class="dot"></span></label>
+      </div>
+    </div>
+
+</div>
+
 </body>
 </html>

@@ -1,19 +1,131 @@
- *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    display: flex;
-    justify-content: center;
-    margin-top: 1%;
-    background-color: #152164;
-    color: white;
-    text-align: center;
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  background-color: #152164;
+  color: white;
+  text-align: center;
+}
+.wrap {  
+  width: 40vw;    
+  max-width: 100%; 
+}
+.wrap-slides-outer {  
+  border: 0.4rem solid white;
+  background: #fff;  
+  margin-bottom: 1.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+.wrap-slides {
+  transition: all 0.7s ease;
+  width: 500%;   
+  display: flex;
+  align-items: center;
+}
+
+.slide {
+  width: 25%;
+}
+
+img {
+  width: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#slide1:checked ~ .wrap-slides-outer .wrap-slides {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .wrap-slides-outer .wrap-slides {
+  transform: translateX(-20%);
+}
+
+#slide3:checked ~ .wrap-slides-outer .wrap-slides {
+  transform: translateX(-40%);
+}
+
+#slide4:checked ~ .wrap-slides-outer .wrap-slides {
+  transform: translateX(-60%);
+}
+#slide5:checked ~ .wrap-slides-outer .wrap-slides {
+  transform: translateX(-80%);
+}
+
+.wrap-text-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.text {
+  display: none; 
+  font-size: 1.5rem;
+  line-height: 1em;
+  font-weight: normal;
+}
+
+#slide1:checked ~ .wrap-text-labels .text-slide1,
+#slide2:checked ~ .wrap-text-labels .text-slide2,
+#slide3:checked ~ .wrap-text-labels .text-slide3,
+#slide4:checked ~ .wrap-text-labels .text-slide4,
+#slide5:checked ~ .wrap-text-labels .text-slide5 {
+  display: block;  
+  animation: opacity 3.5s ease;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
   }
-  .wrap {  
-    width: 40vw;    
-    max-width: 100%; 
+  50% {
+    opacity: 0.70;
   }
-  
+  100% {
+    opacity: 1;
+  }
+}
+
+.label-radio {
+  display: inline-block;
+  width: 1.5rem;
+  height: 2rem;   
+  padding: 0.5rem;
+  margin-right: 0.2rem;
+  cursor: pointer;    
+}
+
+.dot {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 100%;
+  background: black;
+  border: 0.15rem solid black;
+  transition: all 0.5s ease-out;
+}
+
+.dot:hover, .dot:active {
+  border: 0.10rem solid white;
+  background: white;
+  border-radius: 1px solid white;
+  outline: 3px solid white;
+}
+
+#slide1:checked ~ .wrap-text-labels .wrap-labels .label-radio1 .dot,
+#slide2:checked ~ .wrap-text-labels .wrap-labels .label-radio2 .dot,
+#slide3:checked ~ .wrap-text-labels .wrap-labels .label-radio3 .dot,
+#slide4:checked ~ .wrap-text-labels .wrap-labels .label-radio4 .dot,
+#slide5:checked ~ .wrap-text-labels .wrap-labels .label-radio5 .dot {
+  background: transparent;
+}
