@@ -129,3 +129,27 @@ img {
 #slide5:checked ~ .wrap-text-labels .wrap-labels .label-radio5 .dot {
   background: transparent;
 }
+
+@media (max-width: 1024px) {
+  .wrap {
+    width: 60vw;   
+    height: 60vh; 
+  }
+  body {
+    margin-top: 3%;
+  }
+  .wrap-text {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    width: 70vw;
+    height: 70vh;
+  }
+  .wrap-text-labels {
+    gap: 1.5rem;
+    flex-direction: column-reverse;
+  }
+}
